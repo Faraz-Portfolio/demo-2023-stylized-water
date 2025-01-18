@@ -9,6 +9,7 @@ import Fresnel from "./Fresnel";
 import HSVLerp from "./HSVLerp";
 import { useWaterControls } from "./useWaterControls";
 
+// @ts-ignore
 import { patchShaders } from "gl-noise/build/glNoise.m";
 import Blend from "./Blend";
 import DistortUv from "./DistortUv";
