@@ -1,0 +1,9 @@
+name: Call a reusable deploy workflow
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  call-workflow:
+    uses: Faraz-Portfolio/demo-template/.github/workflows/deploy.yml@main
