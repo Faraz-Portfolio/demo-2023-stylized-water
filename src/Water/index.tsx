@@ -376,8 +376,8 @@ export function Water(props: GroupProps) {
   );
 
   const [foamTexture, normalsTexture] = useTexture([
-    "/foam.png",
-    "/normal.jpg",
+    import.meta.env.BASE_URL + "foam.png",
+    import.meta.env.BASE_URL + "normal.jpg",
   ]);
 
   const planarReflections = usePlanarReflections(waterRef, hasReflection);

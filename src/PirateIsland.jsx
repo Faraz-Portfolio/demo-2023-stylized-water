@@ -7,7 +7,9 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 
 export function Model(props) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/pirate_island.glb");
+  const { nodes, materials, animations } = useGLTF(
+    import.meta.env.BASE_URL + "pirate_island.glb"
+  );
   const { actions } = useAnimations(animations, group);
   return (
     <group ref={group} {...props} dispose={null}>
@@ -4822,4 +4824,4 @@ export function Model(props) {
   );
 }
 
-useGLTF.preload("/pirate_island.glb");
+useGLTF.preload(import.meta.env.BASE_URL + "pirate_island.glb");

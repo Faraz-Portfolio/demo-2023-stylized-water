@@ -9,6 +9,14 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Faraz-Portfolio/demo-2023-stylized-water"
+  },
+  "author": {
+    "name": "Faraz Shaikh",
+    "email": "farazzshaikh@gmail.com"
+  },
   "dependencies": {
     "@react-three/drei": "^9.121.2",
     "@react-three/fiber": "^8.17.12",

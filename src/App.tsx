@@ -72,10 +72,9 @@ export default function App() {
           <EffectComposer>
             <Vignette offset={0.4} darkness={0.4} />
             {AO && <N8AO aoRadius={20} intensity={8} screenSpaceRadius />}
-            {blur && <Autofocus debug bokehScale={8} focusRange={0.01} />}
+            {blur && <Autofocus bokehScale={8} focusRange={0.01} />}
           </EffectComposer>
         )}
-
       </Canvas>
       <Leva collapsed />
       <Creds />

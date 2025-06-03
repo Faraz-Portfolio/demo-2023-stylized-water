@@ -142,7 +142,7 @@ export function usePlanarReflections(
 
   return {
     uniforms,
-    render: ({ gl, camera, scene }: RootState) => {
+    render: ({ gl, scene }: RootState) => {
       const parent = waterRef.current;
       if (!parent || !hasReflection) return;
 

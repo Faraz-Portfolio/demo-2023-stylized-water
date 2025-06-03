@@ -330,7 +330,7 @@ export function useWaterControls(uniforms: {
         min: 0.0,
         max: 360.0,
         step: 0.01,
-        onChange: (value: number) => {
+        onChange: (value: number[]) => {
           uniforms.uWaveDirection.value.x = value[0];
           uniforms.uWaveDirection.value.y = value[1];
           uniforms.uWaveDirection.value.z = value[2];
