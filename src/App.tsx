@@ -1,26 +1,29 @@
-import { Canvas } from "@react-three/fiber";
 import {
   Environment,
   OrbitControls,
   PerspectiveCamera,
   TransformControls,
 } from "@react-three/drei";
-import "./styles.css";
-import { Water } from "./Water";
-import { Leva, useControls } from "leva";
-import { Model } from "./PirateIsland";
+import { Canvas } from "@react-three/fiber";
 import {
+  Autofocus,
   EffectComposer,
   N8AO,
   Vignette,
-  Autofocus,
 } from "@react-three/postprocessing";
+import { Leva, useControls } from "leva";
 import { Creds } from "./Creds";
+import { Model } from "./PirateIsland";
+import "./styles.css";
+import { Water } from "./Water";
 
 function Lights() {
   return (
     <>
-      <Environment files="animestyled_hdr.hdr" background />
+      <Environment
+        files={"/demo-2023-stylized-water/animestyled_hdr.hdr"}
+        background
+      />
       <hemisphereLight intensity={0.5} color="white" groundColor="#f88" />
       <directionalLight
         color="orange"

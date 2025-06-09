@@ -1,5 +1,5 @@
 import { useTexture } from "@react-three/drei";
-import { GroupProps, useFrame, useThree } from "@react-three/fiber";
+import { useFrame, useThree } from "@react-three/fiber";
 import * as React from "react";
 import * as THREE from "three";
 
@@ -10,12 +10,13 @@ import HSVLerp from "./HSVLerp";
 import { useWaterControls } from "./useWaterControls";
 
 // @ts-ignore
+import { ElementProps } from "@react-three/fiber/dist/declarations/src/three-types";
 import { patchShaders } from "gl-noise/build/glNoise.m";
 import Blend from "./Blend";
 import DistortUv from "./DistortUv";
 import { usePlanarReflections } from "./usePlanarReflections";
 
-export function Water(props: GroupProps) {
+export function Water(props: ElementProps<typeof THREE.Group>) {
   const waterRef = React.useRef<THREE.Mesh>(null!);
   const size = useThree((state) => state.size);
   const viewport = useThree((state) => state.viewport);
@@ -376,8 +377,8 @@ export function Water(props: GroupProps) {
   );
 
   const [foamTexture, normalsTexture] = useTexture([
-    import.meta.env.BASE_URL + "foam.png",
-    import.meta.env.BASE_URL + "normal.jpg",
+    "/demo-2023-stylized-water/foam.png",
+    "/demo-2023-stylized-water/normal.jpg",
   ]);
 
   const planarReflections = usePlanarReflections(waterRef, hasReflection);
