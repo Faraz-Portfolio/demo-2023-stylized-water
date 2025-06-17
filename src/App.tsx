@@ -12,7 +12,6 @@ import {
   Vignette,
 } from "@react-three/postprocessing";
 import { Leva, useControls } from "leva";
-import { Creds } from "./Creds";
 import { Model } from "./PirateIsland";
 import "./styles.css";
 import { Water } from "./Water";
@@ -80,7 +79,6 @@ export default function App() {
         )}
       </Canvas>
       <Leva collapsed />
-      <Creds />
     </>
   );
 }
