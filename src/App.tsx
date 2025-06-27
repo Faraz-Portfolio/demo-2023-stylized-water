@@ -13,7 +13,6 @@ import {
 } from "@react-three/postprocessing";
 import { Leva, useControls } from "leva";
 import { Model } from "./PirateIsland";
-import "./styles.css";
 import { Water } from "./Water";
 
 function Lights() {
@@ -78,7 +77,12 @@ export default function App() {
           </EffectComposer>
         )}
       </Canvas>
-      <Leva collapsed />
+      <Leva
+        collapsed
+        titleBar={{
+          title: "Options",
+        }}
+      />
     </>
   );
 }
